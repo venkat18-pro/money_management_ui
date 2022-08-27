@@ -1,0 +1,11 @@
+<app-header (onMenuChange) = "changeMenu()"></app-header>
+<div class="body-container">
+    <mat-drawer-container>
+        <mat-drawer mode="side" [opened] = "menuOpen">
+            <app-sidebar class = "sidebar"></app-sidebar>
+        </mat-drawer>
+        <mat-drawer-content>
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

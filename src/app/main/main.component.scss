@@ -1,0 +1,28 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.body-container {
+    height: 91%;
+    // background: blueviolet;
+    // display: grid;
+    // width: 100%;
+    // grid-template-columns: 20% 0 80%;
+    // grid-template-rows: 100%;
+
+    mat-drawer-container {
+        height: 100%;
+
+        mat-drawer {
+            width: 200px;
+        }
+    }
+
+    .sidebar {
+        width: 100%;
+        background-color: blue;
+    }
+
+}
