@@ -10,10 +10,10 @@
     <mat-divider></mat-divider>
     <h4 matSubheader>Pages</h4>
 
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/main/income">Income </a>
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/main/outgoing">Outgoing</a>
-
+    <ng-container *ngFor="let nav of sidebar">
+        <a mat-list-item routerLinkActive="list-item-active" [routerLink]="nav.routerLink">{{nav.name}}</a>
+    </ng-container>
+    
     <!-- <mat-divider></mat-divider> -->
 
 </mat-nav-list>

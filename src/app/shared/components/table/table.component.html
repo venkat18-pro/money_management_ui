@@ -1,0 +1,14 @@
+<p-table [columns] = 'col' [value] = [pValue]>
+    <ng-template pTemplate = 'header' let-columns>
+        <tr *ngFor = 'let column of columns'>
+            <th>{{column.herader}}</th>
+        </tr>
+    </ng-template>
+    <ng-template pTeamplate = 'body' let-pValue let-columns = 'column'>
+        <tr>
+            <td *ngFor="let col of columns">
+                {{pValue[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
