@@ -1,13 +1,13 @@
-<p-table [columns] = 'col' [value] = 'pValue'>
-    <ng-template pTemplate = 'header' let-columns>
-        <tr *ngFor = 'let column of columns'>
-            <th>{{column.herader}}</th>
+<p-table [columns]='cols' [value]='pValues'>
+    <ng-template pTemplate='header' let-headers>
+        <tr>
+            <th *ngFor='let column of headers'>{{column.header}}</th>
         </tr>
     </ng-template>
-    <ng-template pTeamplate = 'body' let-pValue let-columns = 'column'>
+    <ng-template pTemplate='body' let-value let-columns="columns">
         <tr>
-            <td *ngFor="let col of columns">
-                {{pValue[col.field]}}
+            <td *ngFor="let cols of columns">
+                {{value[cols.field]}}
             </td>
         </tr>
     </ng-template>

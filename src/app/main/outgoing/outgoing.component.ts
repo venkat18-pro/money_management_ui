@@ -15,7 +15,7 @@ export class OutgoingComponent implements OnInit {
 
   ngOnInit(): void {
     this.colHeader = [
-      {field: 's.no', header: 'S.No'},
+      {field: 's_no', header: 'S.No'},
       {field: 'date', header: 'Date'}
     ];
     

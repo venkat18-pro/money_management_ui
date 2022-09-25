@@ -8,8 +8,8 @@ import { TableField } from '../../model/table.model';
 })
 export class TableComponent implements OnInit {
 
-  @Input() col: TableField[] = [];
-  @Input() pValue: any = [];
+  @Input() cols: TableField[] = [];
+  @Input() pValues: any = [];
 
   constructor() { }
 
