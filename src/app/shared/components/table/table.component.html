@@ -1,7 +1,11 @@
-<p-table [columns]='cols' [value]='pValues'>
+<p-table [columns]='cols' [value]='pValues' styleClass="p-datatable-lg p-datatable-striped"
+[paginator]="true" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]"
+>
     <ng-template pTemplate='header' let-headers>
         <tr>
-            <th *ngFor='let column of headers'>{{column.header}}</th>
+            <th *ngFor='let column of headers'>
+                {{column.header}}
+            </th>
         </tr>
     </ng-template>
     <ng-template pTemplate='body' let-value let-columns="columns">
@@ -10,5 +14,8 @@
                 {{value[cols.field]}}
             </td>
         </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
     </ng-template>
 </p-table>
