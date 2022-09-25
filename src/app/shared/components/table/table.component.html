@@ -1,5 +1,6 @@
 <p-table [columns]='cols' [value]='pValues' styleClass="p-datatable-lg p-datatable-striped"
 [paginator]="true" [rows]="10" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]"
+scrollHeight="93%"
 >
     <ng-template pTemplate='header' let-headers>
         <tr>
@@ -16,6 +17,6 @@
         </tr>
     </ng-template>
     <ng-template pTemplate="paginatorleft">
-        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        <p-button type="button" icon="pi pi-plus" (click)="onAdd()" styleClass="p-button-text"></p-button>
     </ng-template>
 </p-table>

@@ -3,7 +3,7 @@
         <button class="add-btn">Add</button>
     </div> -->
     <div class="body">
-        <app-table [cols] = 'colHeader' [pValues] = 'value'></app-table>
+        <app-table class="p-table" [cols] = 'colHeader' [pValues] = 'value' (emitOnAdd)="onCreateOutgoing()"></app-table>
     </div>
 </div>
 

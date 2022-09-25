@@ -1,0 +1,11 @@
+p-table {
+    height: 100%; 
+
+    ::ng-deep .p-datatable {
+        height: 100%;
+
+        .p-datatable-wrapper {
+            height: 93%;
+        }
+    }
+}

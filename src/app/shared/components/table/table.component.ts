@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TableField } from '../../model/table.model';
 
 @Component({
@@ -10,10 +10,15 @@ export class TableComponent implements OnInit {
 
   @Input() cols: TableField[] = [];
   @Input() pValues: any = [];
+  @Output() emitOnAdd = new EventEmitter()
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onAdd() {
+    this.emitOnAdd.emit();
   }
 
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TableField } from 'src/app/shared/model/table.model';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { CreateOutgoingComponent } from './create-outgoing/create-outgoing.component';
 
 @Component({
   selector: 'app-outgoing',
@@ -11,7 +13,7 @@ export class OutgoingComponent implements OnInit {
   colHeader!: TableField[];
   value!: any[];
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.colHeader = [
@@ -34,6 +36,13 @@ export class OutgoingComponent implements OnInit {
       },
     ]
 
+  }
+
+  onCreateOutgoing() {
+    this.dialog.open(CreateOutgoingComponent, {
+      width: '700px',
+      height: '700px'
+    })
   }
 
 }
