@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main.component';
-import { IMPORTS } from '../constant/importsAndExports';
 import { CommonModule } from '@angular/common';
 import { DashboardModule } from "../main/dashboard/dashboard.module"
 import { IncomeModule } from "../main/income/income.module"

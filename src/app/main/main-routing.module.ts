@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('./outgoing/outgoing.module').then(m => m.OutgoingModule)
       },
       {
+        path: 'balance',
+        loadChildren: () => import('./balance/balance.module').then((m) => m.BalanceModule)
+      },
+      {
         path: '',
         redirectTo: 'dashboard',
         pathMatch: 'prefix'

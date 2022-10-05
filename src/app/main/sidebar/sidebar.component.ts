@@ -8,7 +8,7 @@ import { SidebarDOI } from './sidebar.model';
 })
 export class SidebarComponent implements OnInit {
   
-  sidebar!: SidebarDOI[];
+  sidebar: SidebarDOI[] = [];
 
   constructor() { }
 

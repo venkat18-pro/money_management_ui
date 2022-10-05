@@ -1,4 +1,4 @@
 export interface SidebarDOI  {
-    name: string | undefined,
-    routerLink: string | undefined
+    name: string,
+    routerLink: string
 }
